@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/dev-tools/README.html" />
 <meta property="og:site_name" content="blockly-samples" />
 <script type="application/ld+json">
-{"description":"A library of common utilities for Blockly extension development.","headline":"@blockly/dev-tools Demo","url":"http://localhost:4000/plugins/dev-tools/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"headline":"@blockly/dev-tools Demo","description":"A library of common utilities for Blockly extension development.","url":"http://localhost:4000/plugins/dev-tools/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -166,14 +166,34 @@
 You can find the full list of helpers <a href="https://github.com/google/blockly-samples/blob/master/plugins/dev-tools/src/test_helpers.mocha.js">here</a>.</p>
 
 <h3 id="debug-renderer">Debug Renderer</h3>
-<p>The debug renderer is a helpful tool to debug blocks when building a custom renderer.</p>
+<p>The debug renderer is a helpful tool to debug blocks when building a custom
+renderer. It displays the different elements on a block such as the rows,
+elements and connections shown below.</p>
 
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">DebugRenderer</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@blockly/dev-tools</span><span class="dl">'</span><span class="p">;</span>
-<span class="c1">// Initialize the debug renderer.</span>
-<span class="nx">DebugRenderer</span><span class="p">.</span><span class="nx">init</span><span class="p">();</span>
+<p><img src="https://github.com/google/blockly-samples/raw/master/plugins/dev-tools/readme-media/DebuggerRows.png" alt="A block showing the rows." />
+<img src="https://github.com/google/blockly-samples/raw/master/plugins/dev-tools/readme-media/DebuggerElements.png" alt="A block showing the elements." />
+<img src="https://github.com/google/blockly-samples/raw/master/plugins/dev-tools/readme-media/DebuggerConnections.png" alt="A block showing the connections." /></p>
+
+<p>If you want to use the debug a custom renderer with the playground, you can
+simply set your renderer in the <code class="language-plaintext highlighter-rouge">defaultOptions</code> passed into <code class="language-plaintext highlighter-rouge">createPlayground</code>.
+The debug renderer can then be turned on/off by toggling the ‘debugEnabled’
+option under the ‘Debug’ folder.</p>
+
+<p>If you want to modify the rectangles that are drawn or you are not using the
+playground, you can follow the example below.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span><span class="nx">createNewRenderer</span><span class="p">,</span> <span class="nx">DebugDrawer</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@blockly/dev-tools</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">class</span> <span class="nx">CustomDebugDrawer</span> <span class="kd">extends</span> <span class="nx">DebugDrawer</span> <span class="p">{</span>
+  <span class="c1">// Add custom functionality here.</span>
+<span class="p">}</span>
+
+<span class="kd">const</span> <span class="nx">DebugRenderer</span> <span class="o">=</span> <span class="nx">createNewRenderer</span><span class="p">(</span><span class="nx">YourCustomRenderer</span><span class="p">);</span>
+<span class="nx">DebugRenderer</span><span class="p">.</span><span class="nx">DebugDrawerClass</span> <span class="o">=</span> <span class="nx">CustomDebugDrawer</span><span class="p">;</span>
+<span class="nx">Blockly</span><span class="p">.</span><span class="nx">blockRendering</span><span class="p">.</span><span class="nx">register</span><span class="p">(</span><span class="dl">'</span><span class="s1">debugRenderer</span><span class="dl">'</span><span class="p">,</span> <span class="nx">DebugRenderer</span><span class="p">);</span>
+
+<span class="nx">Blockly</span><span class="p">.</span><span class="nx">inject</span><span class="p">(</span><span class="dl">'</span><span class="s1">blocklyDiv</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span><span class="na">renderer</span><span class="p">:</span> <span class="dl">'</span><span class="s1">debugRenderer</span><span class="dl">'</span><span class="p">});</span>
 </code></pre></div></div>
-
-<p>The debug renderer is included by default in the playground.</p>
 
 <h3 id="logger">Logger</h3>
 <p>A lightweight workspace console logger.</p>

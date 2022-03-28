@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/scroll-options/README.html" />
 <meta property="og:site_name" content="blockly-samples" />
 <script type="application/ld+json">
-{"description":"A Blockly plugin that adds advanced scroll options such as scroll-on-drag and scroll while holding a block.","headline":"@blockly/plugin-scroll-options Demo","url":"http://localhost:4000/plugins/scroll-options/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"headline":"@blockly/plugin-scroll-options Demo","description":"A Blockly plugin that adds advanced scroll options such as scroll-on-drag and scroll while holding a block.","url":"http://localhost:4000/plugins/scroll-options/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -125,6 +125,9 @@ parameters for edge scrolling.</p>
       <span class="dl">'</span><span class="s1">blockDragger</span><span class="dl">'</span><span class="p">:</span> <span class="nx">ScrollBlockDragger</span><span class="p">,</span>
       <span class="dl">'</span><span class="s1">metricsManager</span><span class="dl">'</span><span class="p">:</span> <span class="nx">ScrollMetricsManager</span><span class="p">,</span>
     <span class="p">},</span>
+  <span class="na">move</span><span class="p">:</span> <span class="p">{</span>
+    <span class="na">wheel</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span> <span class="c1">// Required for wheel scroll to work.</span>
+  <span class="p">},</span>
 <span class="p">});</span>
 
 <span class="c1">// Initialize plugin.</span>

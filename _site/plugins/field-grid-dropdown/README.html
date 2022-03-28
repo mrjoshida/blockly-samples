@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/field-grid-dropdown/README.html" />
 <meta property="og:site_name" content="blockly-samples" />
 <script type="application/ld+json">
-{"description":"A Blockly dropdown field with grid layout.","headline":"@blockly/field-grid-dropdown Demo","url":"http://localhost:4000/plugins/field-grid-dropdown/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"headline":"@blockly/field-grid-dropdown Demo","description":"A Blockly dropdown field with grid layout.","url":"http://localhost:4000/plugins/field-grid-dropdown/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -97,9 +97,15 @@
 <h2 id="usage">Usage</h2>
 
 <p>This field accepts the same parameters as the <a href="https://developers.google.com/blockly/guides/create-custom-blocks/fields/built-in-fields/dropdown#creation">Blockly.FieldDropdown</a>
-in Blockly core. The config object bag passed into this field accepts an
-additional parameter <code class="language-plaintext highlighter-rouge">"columns"</code> that can be used to specify the number of
-columns in the dropdown field (must be an integer greater than 0, default to 3).</p>
+in Blockly core. The config object bag passed into this field accepts additional optional parameters:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">"columns"</code> to specify the number of columns in the dropdown field (must be an integer greater than 0).
+If not provided, the default is 3 columns.</li>
+  <li><code class="language-plaintext highlighter-rouge">"primaryColour"</code> to specify the colour of the dropdown (must be a string CSS colour). If not provided,
+the dropdown color will match the primary colour of the parent block.</li>
+  <li><code class="language-plaintext highlighter-rouge">"borderColour"</code> to specify the colour of the border of the dropdown (must be a string CSS colour). If
+not provided, the border colour will match the tertiary colour of the parent block.</li>
+</ul>
 
 <h3 id="javascript">JavaScript</h3>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">Blockly</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">blockly</span><span class="dl">'</span><span class="p">;</span>
