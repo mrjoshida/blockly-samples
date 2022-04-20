@@ -40,10 +40,10 @@
     "src"
   ],
   "devDependencies": {
-    "@blockly/dev-scripts": "^1.2.16",
+    "@blockly/dev-scripts": "^1.2.15",
     "@blockly/dev-tools": "2.6.1",
     "blockly": "5.20210325.1",
-    "typescript": "^4.0.5"
+    "typescript": "3-4.0.5"
   },
   "peerDependencies": {
     "blockly": "3 - 6"
