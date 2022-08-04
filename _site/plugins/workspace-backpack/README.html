@@ -121,6 +121,7 @@
 <p>This plugin takes an optional configuration object.</p>
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>{
   allowEmptyBackpackOpen: (boolean|undefined),
+  useFilledBackpackImage: (boolean|undefined),
   contextMenu: {
     emptyBackpack: (boolean|undefined),
     removeFromBackpack: (boolean|undefined),
@@ -137,6 +138,7 @@ configuration object, you can currently configure which context menu options are
 registered at <code class="language-plaintext highlighter-rouge">init</code>.</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">backpackOptions</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">allowEmptyBackpackOpen</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">useFilledBackpackImage</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
   <span class="na">contextMenu</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">emptyBackpack</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">removeFromBackpack</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -150,6 +152,7 @@ registered at <code class="language-plaintext highlighter-rouge">init</code>.</p
 passed in options that is undefined:</p>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">defaultOptions</span> <span class="o">=</span> <span class="p">{</span>
   <span class="na">allowEmptyBackpackOpen</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+  <span class="na">useFilledBackpackImage</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
   <span class="na">contextMenu</span><span class="p">:</span> <span class="p">{</span>
     <span class="na">emptyBackpack</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="na">removeFromBackpack</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
@@ -163,6 +166,9 @@ passed in options that is undefined:</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">allowEmptyBackpackOpen</code> property, if set to <code class="language-plaintext highlighter-rouge">false</code>, will prevent the backpack flyout from
 being opened if the backpack is empty.</p>
+
+<p>The <code class="language-plaintext highlighter-rouge">useFilledBackpackImage</code> property, if set to <code class="language-plaintext highlighter-rouge">true</code>, will change the
+backpack image when the backpack has something in it.</p>
 
 <p>The <code class="language-plaintext highlighter-rouge">disablePreconditionChecks</code> property will prevent the “Copy to Backpack”
 context menu option from disabling the context menu option if the block is

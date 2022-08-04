@@ -8,10 +8,8 @@ layout: index
 * [Blocks Plus Minus](plugins/block-plus-minus/test/index.html)
 * [Blocks Dynamic Connection](plugins/block-dynamic-connection/test/index.html)
 
-## Block Extensions
-* [Block Extension Tooltip](plugins/block-extension-tooltip/test/index.html)
-
 ## Fields
+* [Field Bitmap](plugins/field-bitmap/test/index.html)
 * [Field Date](plugins/field-date/test/index.html)
 * [Field Slider](plugins/field-slider/test/index.html)
 * [Field Grid Dropdown](plugins/field-grid-dropdown/test/index.html)
@@ -31,6 +29,8 @@ layout: index
 * [Keyboard Navigation](plugins/keyboard-navigation/test/index.html)
 * [Scroll Options](plugins/scroll-options/test/index.html)
 * [Serialize Disabled Interactions](plugins/serialize-disabled-interactions/test/index.html)
+* [Cross Tab Copy Paste](plugins/cross-tab-copy-paste/test/index.html)
+* [Suggested Blocks](plugins/suggested-blocks/test/index.html)
 
 ## Themes
 * [Theme Dark](plugins/theme-dark/test/index.html)
@@ -77,6 +77,9 @@ layout: index
 
 ## Backpack
 * [Shared Backpacks](examples/backpack-demo/index.html)
+
+## Tooltips
+* [Custom Tooltips](examples/custom-tooltips-demo/index.html)
 
 ## Graph
 * [Graph](examples/graph-demo/index.html)
