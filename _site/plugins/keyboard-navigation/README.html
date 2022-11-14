@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/keyboard-navigation/README.html" />
 <meta property="og:site_name" content="blockly-samples" />
 <script type="application/ld+json">
-{"headline":"@blockly/keyboard-navigation Demo","description":"A Blockly plugin that adds keyboard navigation support.","url":"http://localhost:4000/plugins/keyboard-navigation/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"description":"A Blockly plugin that adds keyboard navigation support.","headline":"@blockly/keyboard-navigation Demo","url":"http://localhost:4000/plugins/keyboard-navigation/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -40,11 +40,16 @@
       <div class="subtitle">A Blockly plugin that adds keyboard navigation support.</div>
     </div>
 
+    
+    0.3.2
+    
+    
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/keyboard-navigation/" class="button" target="_blank">View code</a>
 
     
     <!-- NPM LINK -->
     <a href="https://www.npmjs.com/package/@blockly/keyboard-navigation" class="button" target="_blank">View on npm</a>
+    
     
   </nav>
   <main id="main"  class="has-tabs" >
@@ -95,7 +100,7 @@ on our <a href="https://developers.google.com/blockly/guides/configure/web/keybo
 
 <h2 id="usage">Usage</h2>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="o">*</span> <span class="k">as</span> <span class="nx">Blockly</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">blockly</span><span class="dl">'</span><span class="p">;</span>
-<span class="k">import</span> <span class="p">{</span><span class="nx">NavigationController</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">blockly-plugin-keyboard-navigation</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span><span class="nx">NavigationController</span><span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">@blockly/keyboard-navigation</span><span class="dl">'</span><span class="p">;</span>
 <span class="c1">// Inject Blockly.</span>
 <span class="kd">const</span> <span class="nx">workspace</span> <span class="o">=</span> <span class="nx">Blockly</span><span class="p">.</span><span class="nx">inject</span><span class="p">(</span><span class="dl">'</span><span class="s1">blocklyDiv</span><span class="dl">'</span><span class="p">,</span> <span class="p">{</span>
   <span class="na">toolbox</span><span class="p">:</span> <span class="nx">toolboxCategories</span><span class="p">,</span>

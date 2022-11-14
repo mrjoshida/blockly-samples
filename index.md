@@ -10,6 +10,7 @@ layout: index
 
 ## Fields
 * [Field Bitmap](plugins/field-bitmap/test/index.html)
+* [Field HSV Colour](plugins/field-colour-hsv-sliders/test/index.html)
 * [Field Date](plugins/field-date/test/index.html)
 * [Field Slider](plugins/field-slider/test/index.html)
 * [Field Grid Dropdown](plugins/field-grid-dropdown/test/index.html)
@@ -29,8 +30,8 @@ layout: index
 * [Keyboard Navigation](plugins/keyboard-navigation/test/index.html)
 * [Scroll Options](plugins/scroll-options/test/index.html)
 * [Serialize Disabled Interactions](plugins/serialize-disabled-interactions/test/index.html)
+* [Shadow Block Converter](plugins/shadow-block-converter/test/index.html)
 * [Cross Tab Copy Paste](plugins/cross-tab-copy-paste/test/index.html)
-* [Suggested Blocks](plugins/suggested-blocks/test/index.html)
 
 ## Themes
 * [Theme Dark](plugins/theme-dark/test/index.html)
@@ -86,6 +87,3 @@ layout: index
 
 ## Mirrored Blockly
 * [Mirrored Blockly](examples/mirror-demo/index.html)
-
-## Plane
-* [Plane](examples/plane-demo/index.html)

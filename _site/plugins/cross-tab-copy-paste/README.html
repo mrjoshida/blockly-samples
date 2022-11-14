@@ -21,7 +21,7 @@
 <meta property="og:url" content="http://localhost:4000/plugins/cross-tab-copy-paste/README.html" />
 <meta property="og:site_name" content="blockly-samples" />
 <script type="application/ld+json">
-{"headline":"@blockly/plugin-cross-tab-copy-paste Demo","description":"Allows you to copy blocks with cross-tab.","url":"http://localhost:4000/plugins/cross-tab-copy-paste/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
+{"description":"Allows you to copy blocks with cross-tab.","headline":"@blockly/plugin-cross-tab-copy-paste Demo","url":"http://localhost:4000/plugins/cross-tab-copy-paste/README.html","@type":"WebPage","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -40,11 +40,16 @@
       <div class="subtitle">Allows you to copy blocks with cross-tab.</div>
     </div>
 
+    
+    2.0.2
+    
+    
     <a href="https://github.com/google/blockly-samples/blob/master/plugins/cross-tab-copy-paste/" class="button" target="_blank">View code</a>
 
     
     <!-- NPM LINK -->
     <a href="https://www.npmjs.com/package/@blockly/plugin-cross-tab-copy-paste" class="button" target="_blank">View on npm</a>
+    
     
   </nav>
   <main id="main"  class="has-tabs" >
@@ -107,7 +112,9 @@
 
 <span class="c1">// Initialize plugin.</span>
 <span class="kd">const</span> <span class="nx">plugin</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">CrossTabCopyPaste</span><span class="p">();</span>
-<span class="nx">plugin</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">options</span><span class="p">);</span>
+<span class="nx">plugin</span><span class="p">.</span><span class="nx">init</span><span class="p">(</span><span class="nx">options</span><span class="p">,</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">Use this error callback to handle TypeError while pasting</span><span class="dl">'</span><span class="p">);</span>
+  <span class="p">});</span>
 
 <span class="c1">// optional: Remove the duplication command from Blockly's context menu.</span>
 <span class="nx">Blockly</span><span class="p">.</span><span class="nx">ContextMenuRegistry</span><span class="p">.</span><span class="nx">registry</span><span class="p">.</span><span class="nx">unregister</span><span class="p">(</span><span class="dl">'</span><span class="s1">blockDuplicate</span><span class="dl">'</span><span class="p">);</span>
@@ -119,16 +126,21 @@
 
 <h2 id="options">Options</h2>
 <ul>
-  <li>contextMenu {boolean} Register copy, cut, and paste commands in the Blockly context menu.</li>
-  <li>shortcut {boolean} Register cut (ctr + x), copy (ctr + c) and paste (ctr + v) in the keybord shortcut.</li>
+  <li><code class="language-plaintext highlighter-rouge">contextMenu</code> <code class="language-plaintext highlighter-rouge">{boolean}</code>: Register copy, cut, and paste commands in the Blockly context menu.</li>
+  <li><code class="language-plaintext highlighter-rouge">shortcut</code> <code class="language-plaintext highlighter-rouge">{boolean}</code>: Register cut (ctr + x), copy (ctr + c) and paste (ctr + v) in the keybord shortcut.</li>
 </ul>
 
-<h2 id="localization">Localization</h2>
-<p>You can change the displayed words.</p>
-<h3 id="english">English</h3>
-<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Blockly</span><span class="p">.</span><span class="nx">Msg</span><span class="p">[</span><span class="dl">'</span><span class="s1">CROSS_TAB_COPY</span><span class="dl">'</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Copy</span><span class="dl">'</span><span class="p">;</span>
+<h2 id="error-callback">Error Callback</h2>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">typeErrorCallback</code> <code class="language-plaintext highlighter-rouge">{Function}</code>: is an extra parameter to the init method, one can pass a callback to the cross-tab-copy-paste plugin that is called when the plugin triggers a TypeError error when pasting.
+    <h2 id="localization">Localization</h2>
+    <p>You can change the displayed words.</p>
+    <h3 id="english">English</h3>
+    <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Blockly</span><span class="p">.</span><span class="nx">Msg</span><span class="p">[</span><span class="dl">'</span><span class="s1">CROSS_TAB_COPY</span><span class="dl">'</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Copy</span><span class="dl">'</span><span class="p">;</span>
 <span class="nx">Blockly</span><span class="p">.</span><span class="nx">Msg</span><span class="p">[</span><span class="dl">'</span><span class="s1">CROSS_TAB_PASTE</span><span class="dl">'</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">Paste</span><span class="dl">'</span><span class="p">;</span>
-</code></pre></div></div>
+</code></pre></div>    </div>
+  </li>
+</ul>
 
 <h3 id="japanese">Japanese</h3>
 <div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">Blockly</span><span class="p">.</span><span class="nx">Msg</span><span class="p">[</span><span class="dl">'</span><span class="s1">CROSS_TAB_COPY</span><span class="dl">'</span><span class="p">]</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">コピー</span><span class="dl">'</span><span class="p">;</span>
