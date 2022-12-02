@@ -54,6 +54,8 @@ generator['p5_fill'] = function(block) {
   return code;
 };
 
+// Shapes
+
 generator['p5_ellipse'] = function(block) {
   const x = javascriptGenerator.valueToCode(block, 'X',
       javascriptGenerator.ORDER_NONE) || 0;
@@ -64,4 +66,16 @@ generator['p5_ellipse'] = function(block) {
   const height = javascriptGenerator.valueToCode(block, 'HEIGHT',
       javascriptGenerator.ORDER_NONE) || 0;
   return `sketch.ellipse(${x}, ${y}, ${width}, ${height});\n`;
+};
+
+generator['p5_rect'] = function(block) {
+  const x = javascriptGenerator.valueToCode(block, 'X',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const y = javascriptGenerator.valueToCode(block, 'Y',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const width = javascriptGenerator.valueToCode(block, 'WIDTH',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const height = javascriptGenerator.valueToCode(block, 'HEIGHT',
+      javascriptGenerator.ORDER_NONE) || 0;
+  return `sketch.rect(${x}, ${y}, ${width}, ${height});\n`;
 };

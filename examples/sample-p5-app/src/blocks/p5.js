@@ -131,6 +131,7 @@ const fill = {
   'helpUrl': '',
 };
 
+// Shapes
 
 const ellipse = {
   'type': 'p5_ellipse',
@@ -167,10 +168,45 @@ const ellipse = {
   'helpUrl': 'https://p5js.org/reference/#/p5/ellipse',
 };
 
+const rect = {
+  'type': 'p5_rect',
+  'message0': 'draw rectangle %1 x %2 y %3 width %4 height %5',
+  'args0': [
+    {
+      'type': 'input_dummy',
+    },
+    {
+      'type': 'input_value',
+      'name': 'X',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_value',
+      'name': 'Y',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_value',
+      'name': 'WIDTH',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_value',
+      'name': 'HEIGHT',
+      'check': 'Number',
+    },
+  ],
+  'previousStatement': null,
+  'nextStatement': null,
+  'colour': 230,
+  'tooltip': 'Draw a rectangle on the canvas.',
+  'helpUrl': 'https://p5js.org/reference/#/p5/rect',
+};
+
 // Create the block definitions for all the JSON-only blocks.
 // This does not register their definitions with Blockly.
 const jsonBlocks = Blockly.common.createBlockDefinitionsFromJsonArray(
-    [background, stroke, fill, ellipse]);
+    [background, stroke, fill, ellipse, rect]);
 
 export const blocks = {
   'p5_setup': p5Setup, 'p5_draw': p5Draw, 'p5_canvas': p5Canvas, ...jsonBlocks,
