@@ -79,3 +79,15 @@ generator['p5_rect'] = function(block) {
       javascriptGenerator.ORDER_NONE) || 0;
   return `sketch.rect(${x}, ${y}, ${width}, ${height});\n`;
 };
+
+generator['p5_line'] = function(block) {
+  const x1 = javascriptGenerator.valueToCode(block, 'X1',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const y1 = javascriptGenerator.valueToCode(block, 'Y1',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const x2 = javascriptGenerator.valueToCode(block, 'X2',
+      javascriptGenerator.ORDER_NONE) || 0;
+  const y2 = javascriptGenerator.valueToCode(block, 'Y2',
+      javascriptGenerator.ORDER_NONE) || 0;
+  return `sketch.line(${x1}, ${y1}, ${x2}, ${y2});\n`;
+};

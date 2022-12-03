@@ -161,6 +161,7 @@ const ellipse = {
       'check': 'Number',
     },
   ],
+  'inputsInline': true,
   'previousStatement': null,
   'nextStatement': null,
   'colour': 230,
@@ -196,6 +197,7 @@ const rect = {
       'check': 'Number',
     },
   ],
+  'inputsInline': true,
   'previousStatement': null,
   'nextStatement': null,
   'colour': 230,
@@ -203,10 +205,49 @@ const rect = {
   'helpUrl': 'https://p5js.org/reference/#/p5/rect',
 };
 
+const line = {
+  'type': 'p5_line',
+  'message0': 'draw a line from %1 x1 %2 y1 %3 to %4 x2 %5 y2 %6',
+  'args0': [
+    {
+      'type': 'input_dummy',
+    },
+    {
+      'type': 'input_value',
+      'name': 'X1',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_value',
+      'name': 'Y1',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_dummy',
+    },
+    {
+      'type': 'input_value',
+      'name': 'X2',
+      'check': 'Number',
+    },
+    {
+      'type': 'input_value',
+      'name': 'Y2',
+      'check': 'Number',
+    },
+  ],
+  'inputsInline': true,
+  'previousStatement': null,
+  'nextStatement': null,
+  'colour': 230,
+  'tooltip': 'Draw a line on the canvas.',
+  'helpUrl': 'https://p5js.org/reference/#/p5/line',
+};
+
 // Create the block definitions for all the JSON-only blocks.
 // This does not register their definitions with Blockly.
 const jsonBlocks = Blockly.common.createBlockDefinitionsFromJsonArray(
-    [background, stroke, fill, ellipse, rect]);
+    [background, stroke, fill, ellipse, rect, line]);
 
 export const blocks = {
   'p5_setup': p5Setup, 'p5_draw': p5Draw, 'p5_canvas': p5Canvas, ...jsonBlocks,

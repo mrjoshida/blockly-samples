@@ -129,6 +129,44 @@ export const toolbox = {
           },
         },
         {
+          kind: 'block',
+          type: 'p5_line',
+          inputs: {
+            X1: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 50,
+                },
+              },
+            },
+            Y1: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 50,
+                },
+              },
+            },
+            X2: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 150,
+                },
+              },
+            },
+            Y2: {
+              shadow: {
+                type: 'math_number',
+                fields: {
+                  NUM: 150,
+                },
+              },
+            },
+          },
+        },
+        {
           'kind': 'block',
           'type': 'logic_compare',
         },
